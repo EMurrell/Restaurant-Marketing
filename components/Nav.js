@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { Sling as Hamburger } from "hamburger-react";
+import { Twirl as Hamburger } from "hamburger-react";
 
 const links = [
   { name: "MENU", to: "/menu", id: 1 },
@@ -49,10 +49,11 @@ export default function Nav() {
             initial={{ height: 0 }}
             animate={{
               height: "100vh",
+              transition: { duration: 0.6 },
             }}
             exit={{
               height: 0,
-              transition: { delay: 0.3, duration: 0.15 },
+              transition: { delay: 0.2, duration: 0.15 },
             }}
           >
             <motion.div
