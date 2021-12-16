@@ -7,7 +7,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       display: ["Playfair Display"],
+      body: ["Raleway"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

@@ -1,13 +1,14 @@
 import { ChevronDownIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <>
-      <div className="relative h-screen tracking-wide">
+      <div className="relative h-screen mb-8 tracking-wide shadow-xl shadow-neutral-400">
         <div className="absolute inset-0">
           <img
             className="object-cover w-full h-screen"
-            src="/hero-burger.jpg"
+            src="/heroburger2000.jpg"
             alt="delicious burger"
           />
           <div
@@ -19,12 +20,14 @@ export default function Hero() {
           <h1 className="pt-2 text-5xl font-extrabold text-white md:text-6xl lg:text-7xl ">
             Craft Burger Perfection.
           </h1>
-          <p className="max-w-3xl mt-6 text-2xl font-semibold text-gray-100 md:text-3xl lg:text-4xl">
+          <p className="max-w-3xl mt-6 text-2xl font-semibold text-neutral-100 font-body md:text-3xl lg:text-4xl">
             Proudly Serving Your City Since 2010.
           </p>
-          <button className="px-6 py-2 mt-10 text-xl font-semibold text-gray-100 border-2 hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">
-            VIEW MENU
-          </button>
+          <Link href="/menu">
+            <button className="px-8 py-2 mt-10 text-xl font-semibold border-2 text-neutral-100 hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">
+              VIEW MENU
+            </button>
+          </Link>
         </div>
       </div>
     </>

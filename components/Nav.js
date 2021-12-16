@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";
 
 const links = [
-  { name: "MENU", to: "#Menu", id: 1 },
+  { name: "MENU", to: "/menu", id: 1 },
   { name: "ABOUT", to: "#About", id: 2 },
   { name: "GALLERY", to: "#Gallery", id: 3 },
   { name: "CONTACT US", to: "#Contact", id: 4 },
@@ -36,8 +36,8 @@ export default function Nav() {
   const [open, cycleOpen] = useCycle(false, true);
 
   return (
-    <nav className="flex justify-between w-full text-gray-100 bg-black ">
-      <div className="inline-flex px-4 py-6 text-2xl font-medium font-display lg:text-3xl 2xl:text-3xl md:pl-12 lg:pl-16 ">
+    <nav className="flex justify-between w-full text-gray-100 bg-black font-body">
+      <div className="inline-flex px-4 py-6 text-2xl font-medium font-body lg:text-3xl 2xl:text-3xl md:pl-12 lg:pl-16 ">
         Example Burger
       </div>
 
@@ -48,7 +48,7 @@ export default function Nav() {
             className="fixed z-50 w-screen mt-20 text-center bg-black md:hidden"
             initial={{ height: 0 }}
             animate={{
-              height: "70%",
+              height: "100vh",
             }}
             exit={{
               height: 0,
@@ -66,7 +66,7 @@ export default function Nav() {
                 <motion.a
                   key={id}
                   href={to}
-                  className="flex pl-2 my-4 text-gray-100 transition duration-100 ease-in-out transform hover:text-yellow-400 hover:scale-105"
+                  className="flex pl-2 my-6 text-gray-100 transition duration-100 ease-in-out transform hover:text-yellow-400 hover:scale-105"
                   variants={itemVariants}
                   aria-current={links.current ? "page" : undefined}
                   onClick={cycleOpen}
@@ -88,12 +88,12 @@ export default function Nav() {
       </div>
 
       {/* The Navbar on medium screens */}
-      <div className="hidden pr-8 md:inline-flex ">
+      <div className="hidden pr-6 md:inline-flex ">
         {links.map(({ name, to, id }) => (
           <a
             key={id}
             href={to}
-            className="px-8 py-6 text-lg text-gray-100 transition duration-100 ease-in-out transform 2xl:text-xl font-logo hover:text-yellow-400 hover:scale-105"
+            className="px-5 py-6 text-lg text-gray-100 transition duration-100 ease-in-out transform 2xl:text-xl font-logo hover:text-yellow-400 hover:scale-105"
           >
             {name}
           </a>
