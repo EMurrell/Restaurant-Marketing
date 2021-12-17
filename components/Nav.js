@@ -45,11 +45,12 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.aside
-            className="fixed z-50 w-screen mt-20 text-center bg-black md:hidden"
+            className="fixed z-50 w-screen mt-20 bg-black bg-center bg-no-repeat bg-cover md:hidden "
+            style={{ backgroundImage: "url(/transparent-burger4.png)" }}
             initial={{ height: 0 }}
             animate={{
               height: "100vh",
-              transition: { duration: 0.6 },
+              transition: { duration: 0.5 },
             }}
             exit={{
               height: 0,

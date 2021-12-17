@@ -1,3 +1,5 @@
+import FadeUp from "../animations/FadeUp.js";
+
 const navigation = {
   social: [
     {
@@ -47,12 +49,15 @@ export default function Footer() {
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8 font-body">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <h3 className="h-10 text-3xl font-bold text-neutral-900">
-              Example Burger
-            </h3>
-            <p className="text-xl font-medium text-neutral-900 ">
-              Making the world a better place, one burger at a time.
-            </p>
+            <FadeUp>
+              <h3 className="h-10 text-3xl font-bold text-neutral-900">
+                Example Burger
+              </h3>
+
+              <p className="text-xl font-medium text-neutral-900 ">
+                Making the world a better place, one burger at a time.
+              </p>
+            </FadeUp>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
