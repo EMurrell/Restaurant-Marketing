@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="absolute inset-0">
           <img
             className="object-cover w-full h-screen"
-            src="/heroburger2000-1.jpg"
+            src="/heroburger2000.avif"
             alt="delicious burger"
           />
           <div
